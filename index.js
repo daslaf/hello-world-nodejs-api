@@ -4,7 +4,7 @@ const { StringDecoder } = require('string_decoder');
 
 const routeHandler = require('./route-handler');
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3000;
 
 const server = http.createServer(serverConstructor);
 
