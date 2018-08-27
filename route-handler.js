@@ -1,9 +1,13 @@
 const routeHandler = {};
 
 routeHandler.hello = (data, callback) => {
-  callback(200, {
-    message: 'Hey, what\'s good in Baltimore? Nothing!',
-  });
+  if (data.method === 'POST') {
+    callback(200, {
+      message: 'Hey, what\'s good in Baltimore? Nothing!',
+    });
+  } else {
+    callback(200);
+  }
 };
 
 routeHandler.notFound = (data, callback) => {
